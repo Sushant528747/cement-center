@@ -16,6 +16,7 @@ import { ManageProfileComponent } from './components/manage-profile/manage-profi
 import { ManageProductsComponent } from './components/manage-products/manage-products.component';
 import { ManageCustomersComponent } from './components/manage-customers/manage-customers.component';
 import { ManageSalesComponent } from './components/manage-sales/manage-sales.component';
+import {AuthGuard} from "./commons/auth.guard";
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { ManageSalesComponent } from './components/manage-sales/manage-sales.com
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes)
   ],
-  providers: [UserAuthService],
+  providers: [UserAuthService,AuthGuard],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

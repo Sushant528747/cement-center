@@ -8,16 +8,18 @@ import {ManageProfileComponent} from "../components/manage-profile/manage-profil
 import {ManageSalesComponent} from "../components/manage-sales/manage-sales.component";
 import {ManageUserComponent} from "../components/manage-user/manage-user.component";
 import {ManageCustomersComponent} from "../components/manage-customers/manage-customers.component";
+import {AuthGuard} from "./auth.guard";
 
 export const appRoutes: Routes = [
   {
     path: 'home', component: HomeComponent, children: [
+      {path: '', redirectTo:'sales',pathMatch: 'full'},
       {path: 'products', component: ManageProductsComponent},
       {path: 'profile', component: ManageProfileComponent},
       {path: 'sales', component: ManageSalesComponent},
       {path: 'users', component: ManageUserComponent},
       {path: 'customers', component: ManageCustomersComponent}
-    ]
+    ], canActivate: [AuthGuard]
   },
   {
     path: 'login', component: LoginComponent
