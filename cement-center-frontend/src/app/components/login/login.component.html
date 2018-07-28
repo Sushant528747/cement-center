@@ -1,0 +1,30 @@
+<div class="container mt-md-5">
+  <div class="row mt-md-5">
+    <div class="col-md-8 text-xl-center font-italic text-mt-md-5">
+      <h2>Cement Center</h2>
+    </div>
+    <div class="col-md-4 mt-md-5">
+      <div class="container mt-md-5">
+        <div class="row">
+          <form action="" (submit)="authenticate(username.value,password.value)">
+            <div class="form-group text-center">
+              <h4>Please login</h4>
+            </div>
+            <div class="form-group alert alert-danger" *ngIf="isIncorrect">
+              <span class="form-text text-danger text-center">Incorrect Credentials</span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" #username placeholder="username" name="username">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" #password placeholder="password" name="password">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary form-control">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

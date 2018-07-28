@@ -1,3 +1,27 @@
-<p>
-  navbar works!
-</p>
+<nav class="navbar navbar-expand-sm nav-bar-background">
+  <!-- Brand/logo -->
+  <a class="navbar-brand text-dark" [routerLink]="['home']">
+    <span>Cement Center</span>
+  </a>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item ">
+      <a class="nav-link text-dark" routerLinkActive="nav-bar-active nav-bar-active-text" [routerLink]="['sales']">Sales</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link text-dark" routerLinkActive="nav-bar-active nav-bar-active-text" [routerLink]="['products']">Products</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link text-dark" routerLinkActive="nav-bar-active nav-bar-active-text" [routerLink]="['customers']">Customers</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item ">
+      <a class="nav-link text-dark" routerLinkActive="nav-bar-active nav-bar-active-text" [routerLink]="['profile']">My Account</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link text-dark" routerLinkActive="nav-bar-active nav-bar-active-text" [routerLink]="['/login']">Logout</a>
+    </li>
+  </ul>
+</nav>
+

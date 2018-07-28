@@ -1,0 +1,11 @@
+.nav-bar-active{
+  background-color: darkcyan;
+  border-radius: 5px;
+}
+.nav-bar-background{
+  background-color: lightseagreen;
+  color: #f2f2f2;
+}
+.nav-bar-active-text{
+  color: #f2f2f2 !important;
+}
